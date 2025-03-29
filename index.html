@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .login-btn:hover {
+            background: #2980b9;
+        }
+        .link {
+            margin-top: 15px;
+            display: block;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   <div class="login-container">
+     <h2>Login</h2>
+     <form action="#" method="POST">
+         <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+         </div>
+         <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+         </div>
+            <button type="submit" class="login-btn">Sign In</button>
+      </form>
+     <a href="neural-network.html" class="link">Go to Neural Network Visualization</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Visualization</title>
+    <link rel="stylesheet" href="style_for_nn.css">
+    <link rel="stylesheet" href="navbar_style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="neural-network.html">Neural Network</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    <!-- Theory Section -->
+    <section class="theory">
+      <h2>Understanding Neural Networks with a Real-Life Scenario</h2>
+      <p>Imagine you are in a village where no one has ever seen a car before. Your task is to train a group of people to recognize a car when they see one. But instead of looking at the whole car, you decide to break the task into smaller parts and assign each person a specific job, just like neurons in a neural network.</p>
+      <h3>Step 1: Dividing the People into Subgroups (Like Neural Layers)</h3>
+      <p>Since no one knows what a car looks like, we divide the people into smaller teams based on what part of the car they should focus on. Each person will specialize in detecting just one part:</p>
+        <ul>
+            <li>Person A → Focuses only on the tyres</li>
+            <li>Person B → Focuses only on the headlights</li>
+            <li>Person C → Focuses only on the body</li>
+        </ul>
+      <p>Each of them will return a score between 0 and 1, indicating how sure they are that they found that feature.</p>
+      <h3>Step 2: Weighting the Features (Like Hidden Layers Processing Information)</h3>
+      <p>Now, we have different probability scores, but not all parts are equally important. So, we assign another person (Person D) the job of weighting these features based on their importance.</p>
+      <p>Final Score = (0.8 × 0.3) + (0.4 × 0.5) + (0.9 × 0.9) = 1.25</p>
+
+        <h3>Step 3: Making the Final Decision (Like the Output Layer)</h3>
+        <p>Finally, the last person, Person X, looks at the total score and decides if the object is a car or not.</p>
+
+        <h3>Learning and Improvement (Like Backpropagation)</h3>
+        <p>If Person X makes mistakes, we adjust the weights to improve future decisions.</p>
+
+        <h3>How This Relates to Neural Networks</h3>
+        <table>
+            <tr>
+                <th>Human Learning</th>
+                <th>Neural Network Equivalent</th>
+            </tr>
+            <tr>
+                <td>People detect parts of a car</td>
+                <td>Input Layer (Detecting features)</td>
+            </tr>
+            <tr>
+                <td>Scores between 0-1 for each part</td>
+                <td>Activation Values (Probabilities)</td>
+            </tr>
+            <tr>
+                <td>Person D assigns importance to each part</td>
+                <td>Weights in Hidden Layers</td>
+            </tr>
+            <tr>
+                <td>Person X makes the final decision</td>
+                <td>Output Layer (Classification Decision)</td>
+            </tr>
+            <tr>
+                <td>Adjusting mistakes for better decisions</td>
+                <td>Backpropagation (Learning Process)</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Neural Network Visualization -->
+    <title>Neural Network Visualization</title>
+       <div class="network-container">
+            <h1>Neural Network Visualization</h1>
+            <div class="network">
+                <!-- Connections -->
+                <svg class="connections">
+                    <!-- Input to Hidden connections -->
+                    <line class="connection" x1="210" y1="50" x2="285" y2="200"/>
+                    <line class="connection" x1="285" y1="50" x2="285" y2="200"/>
+                    <line class="connection" x1="360" y1="50" x2="285" y2="200"/>
+                    
+                    <!-- Hidden to Output connection -->
+                    <line class="connection" x1="285" y1="200" x2="285" y2="350"/>
+                </svg>
+    
+                <!-- Input Layer -->
+                <div class="layer input-layer">
+                    <div class="neuron">A</div>
+                    <div class="neuron">B</div>
+                    <div class="neuron">C</div>
+                </div>
+    
+                <!-- Hidden Layer -->
+                <div class="layer hidden-layer">
+                    <div class="neuron">D</div>
+                </div>
+    
+                <!-- Output Layer -->
+                <div class="layer output-layer">
+                    <div class="neuron">X</div>
+                </div>
+            </div>
+        </div>
+   </body>
+</html>
